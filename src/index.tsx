@@ -23,6 +23,8 @@ app.use(router)
 
 // 等待路由就绪后安装插件和挂载应用
 router.isReady().then(() => {
+  // 初始化样式
+  import('@/styles/normalize.scss')
   // 安装 i18n
   app.use(i18n)
   // 安装 Pinia
