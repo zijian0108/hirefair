@@ -2,6 +2,8 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 import { Home } from '../pages/home/home'
 import { Login } from '../pages/login/login'
+import { t } from '../plugins/locale'
+
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -10,7 +12,7 @@ const router = createRouter({
       path: '/',
       component: Home,
       meta: {
-        title: '首页',
+        title: t('page.home.title'),
         keepAlive: true,
         requiresAuth: true
       }
@@ -19,10 +21,14 @@ const router = createRouter({
       path: '/login',
       component: Login,
       meta: {
-        title: '登录'
+        title: t('page.login.title')
       }
     }
   ]
+})
+
+router.beforeEach((to) => {
+  document.title = to.meta.title || 'hirefair'
 })
 
 export default router

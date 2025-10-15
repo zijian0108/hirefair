@@ -11,8 +11,12 @@
     "format": "pnpm exec biome format --write"
   },
   "dependencies": {
+    "pinia": "^3.0.3",
+    "pinia-plugin-persistedstate": "^4.5.0",
     "vue": "^3.5.22",
-    "vue-router": "^4.5.1"
+    "vue-i18n": "^11.1.12",
+    "vue-router": "^4.5.1",
+    "zipson": "^0.2.12"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.6",
@@ -20,6 +24,7 @@
     "@rsbuild/plugin-babel": "^1.0.6",
     "@rsbuild/plugin-vue": "^1.1.2",
     "@rsbuild/plugin-vue-jsx": "^1.1.1",
+    "@rsbuild/plugin-yaml": "^1.0.3",
     "typescript": "^5.9.3"
   }
 }

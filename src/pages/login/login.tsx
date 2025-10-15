@@ -7,3 +7,6 @@ export const Login: Component = () => {
     </div>
   )
 }
+
+// 定义组件名称
+Login.displayName = 'Login'
